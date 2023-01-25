@@ -12,6 +12,7 @@ class Corescontroller {
 
     async get(req, res) {
         const coreslist = await Cores.find()
+        return res.json(coreslist)
     }
 }
 
