@@ -11,6 +11,8 @@ import Franquiascontroller from "./controllers/Franquiascontroller";
 import SacController from "./controllers/SacController";
 import Comentario from "./controllers/ComentarioController";
 import Sandemailcontroller from "./controllers/Sandemailcontroller";
+import Corescontroller from "./controllers/Corescontroller";
+
 
 const routes = new Router();
 
@@ -54,10 +56,10 @@ routes.get("/pedidos/nomecliente", PedidosController.get5);
 routes.get("/pedidos/cpf", PedidosController.get6);
 routes.get("/pedidos/valor", PedidosController.get7);
 routes.get("/data", PedidosController.get8);
-routes.get("/idLojafranqueada",PedidosController.get9);
-routes.get("/idLojafranqueada",PedidosController.get10);
-routes.get("/idLojafranqueada",PedidosController.get11);
-routes.get("/idLojafranqueada",PedidosController.get12);
+routes.get("/idLojafranqueada", PedidosController.get9);
+routes.get("/idLojafranqueada", PedidosController.get10);
+routes.get("/idLojafranqueada", PedidosController.get11);
+routes.get("/idLojafranqueada", PedidosController.get12);
 routes.delete("/pedidos/:_id", PedidosController.delete);
 routes.put("/pedidos/:idpedido", PedidosController.update);
 
@@ -85,5 +87,10 @@ routes.get("/comentarios/:_id", Comentario.index2);
 
 
 routes.post('/send', Sandemailcontroller.post)
+
+
+
+routes.post('/cores', Corescontroller.post)
+routes.get('/cores', Corescontroller.get)
 
 export default routes;
