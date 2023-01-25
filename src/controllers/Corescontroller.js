@@ -14,6 +14,7 @@ class Corescontroller {
         const coreslist = await Cores.find()
         return res.json(coreslist)
     }
+
 }
 
 export default new Corescontroller();
