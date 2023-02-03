@@ -2,19 +2,19 @@ import Emailsclientes from "../schemas/Emailsclientes";
 
 class Emailclientecontroller {
     async post(req, res) {
-        const { nome, email } = req.body
+        const { nome, telefone } = req.body
         const Emaillist = await Emailsclientes.create({
             nome: nome,
-            email: email
+            telefone: telefone
         })
         return res.json(Emaillist)
     }
     async update(req, res) {
         const { _id } = req.params
-        const { nome, email } = req.body
+        const { nome, telefone } = req.body
         const Emaillist = await Emailsclientes.updateOne({ _id: _id }, {
             nome: nome,
-            email: email
+            telefone: telefone
         })
         return res.json(Emaillist)
     }
